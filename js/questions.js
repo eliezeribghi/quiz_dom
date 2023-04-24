@@ -22,3 +22,13 @@ console.log(question1);
 const reponse1 = window.prompt(question1);
 // Ici, on affiche le retour de l'utilisateur (reponse1)
 console.log(reponse1);
+
+// Etape 3, ici je check si la reponse reçu par l'utilisateur est bien egal a la premiere valeur de mon tableau responses (l'index numero [0] = premiere valeur du tableau)
+// Si c'est egal, on affiche CORRECT
+if (reponse1 == responses[0]) {
+    console.log("CORRECT");
+}
+// Sinon, on affiche faux
+else {
+    console.log("faux");
+}
