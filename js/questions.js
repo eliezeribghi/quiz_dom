@@ -27,8 +27,21 @@ console.log(reponse1);
 // Si c'est egal, on affiche CORRECT
 if (reponse1 == responses[0]) {
     console.log("CORRECT");
+    // Etape 4, si bonne reponse de l'utilisateur, alors on ajoute la question 1 dans la liste vert qu'il y a à gauche
+    const container = document.querySelector("#right .responses");
+    // Ici on va ajouter dans le HTML l'élément qu'on veut ajouter
+    // Si on avait mit : 
+    // container.innerHTML = '<li>'+question1+'</li>';
+    // Ca aurait écraser tout le HTML deja existant
+    container.innerHTML = container.innerHTML + '<li>'+question1+'</li>';
 }
+
 // Sinon, on affiche faux
 else {
+    // Ici meme process que si la reponse est correct, sauf qu'ici on gere le cas ou la reponse est fausse
+    // Donc ici on ajoute la question a la liste rouge a droite
+    const container = document.querySelector("#wrong .responses");
+    container.innerHTML = container.innerHTML + '<li>'+question1+'</li>';
     console.log("faux");
 }
+
