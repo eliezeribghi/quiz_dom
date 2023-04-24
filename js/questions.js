@@ -9,3 +9,8 @@ const responses = [
     72,
     3
 ];
+
+// Etape 1, on recupere la premiere question du tableau
+const question1 = questions[0];
+// Puis on l'affiche
+console.log(question1);
